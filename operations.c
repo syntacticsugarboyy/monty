@@ -1,4 +1,5 @@
 #include "monty.h"
+#define _GNU_SOURCE
 
 /**
  * ope_rations - checks and implements instructions
@@ -36,7 +37,7 @@ void ope_rations(char *line_ptr, unsigned int line_number, FILE *fp)
 
 		if (token1 != NULL)
 		{
-			if (token1 != "pall")
+			if (strcmp(token1, "pall") == 0)
 			{
 				token2 = strtok(NULL, " \n\t\r");
 			}

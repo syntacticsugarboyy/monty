@@ -1,4 +1,5 @@
 #include "monty.h"
+#define _GNU_SOURCE
 
 /**
  * main - Entry point
@@ -12,9 +13,8 @@ char *token2 = NULL;
 int main(int argc, char *argv[])
 {
 	char *line_ptr = NULL;
-	char *token1;
 	FILE *fp;
-	int line_number = 0, getline_val;
+	int line_number = 0;
 
 	if (argc != 2)
 	{
