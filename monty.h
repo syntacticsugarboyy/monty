@@ -3,6 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+extern char *token2;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -35,5 +39,9 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Functions */
+void ope_rations(char* line_ptr, unsigned int line_number, FILE *fp);
+void free_list(stack_t **stack);
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 
 #endif
