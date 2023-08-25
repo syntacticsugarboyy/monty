@@ -10,9 +10,16 @@
 
 void push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *node = malloc(sizeof(stack_t));
+	stack_t *node;
 
-	(void)line_number;
+	if (token2 == NULL)
+	{
+		dprintf(2, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+		return;
+	}
+
+	node = malloc(sizeof(stack_t));
 
 	if (node == NULL)
 	{

@@ -20,13 +20,13 @@ void ope_rations(char *line_ptr, unsigned int line_number, FILE *fp)
 	instruction_t operations[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		/*
-		 * {"pint", pint},
 		 * {"pop", pop},
 		 * {"swap", swap},
 		 * {"add", add},
-		 * {"nop", nop},
 		 */
+		{"nop", nop},
 		{NULL, NULL},
 	};
 
@@ -37,7 +37,7 @@ void ope_rations(char *line_ptr, unsigned int line_number, FILE *fp)
 
 		if (token1 != NULL)
 		{
-			if (strcmp(token1, "pall") == 0)
+			if (strcmp(token1, "pall") != 0 && strcmp(token1, "pint") != 0)
 			{
 				token2 = strtok(NULL, " \n\t\r");
 			}
