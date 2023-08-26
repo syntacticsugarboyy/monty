@@ -21,11 +21,9 @@ void ope_rations(char *line_ptr, unsigned int line_number, FILE *fp)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
-		/*
-		 * {"pop", pop},
-		 * {"swap", swap},
-		 * {"add", add},
-		 */
+		{"pop", pop},
+		{"swap", swap},
+       		{"add", add},
 		{"nop", nop},
 		{NULL, NULL},
 	};
